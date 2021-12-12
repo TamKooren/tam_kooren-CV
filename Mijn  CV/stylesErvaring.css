@@ -1,0 +1,175 @@
+body {
+  color: lightblue;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 10px 1fr 20px;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    ". h ."
+    ". m ."
+    ". f .";
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(lightblue, lightgreen);
+  border-radius: 25px;
+  font-family: "Bowlby One SC", cursive;
+  text-align: center;
+  grid-area: h;
+}
+
+h1 {
+  color: black;
+  font-size: 3rem;
+  padding: 3% 0%;
+  margin: 0;
+  font-family: "Bowlby One SC", cursive;
+}
+
+h2 {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 2rem;
+  padding: 3%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  
+}
+
+
+.instagram,
+.facebook {
+  padding: 5%;
+}
+.instagram:hover {
+  color:lightsalmon
+}
+.facebook:hover {
+  color:lightsalmon;
+}
+
+nav,
+ul,
+li {
+  margin: 0;
+  padding: 2% 0%;
+}
+
+main {
+  grid-area: m;
+  margin: 2% 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 80%;
+  border-radius: 25px;
+  background: linear-gradient(lightblue, lightsalmon);
+  grid-area: f;
+}
+
+span1 {
+  color: green;
+}
+span2 {
+  color:black;
+}
+span3 {
+  color: red;
+}
+
+.copyright {
+  color: red;
+  align-self: center;
+  padding-left: 2%;
+}
+
+li {
+  list-style-type: none;
+  color: black;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  font-family: "Do Hyeon", sans-serif;
+  color: black;
+  background-color: lightblue;
+  text-align: center;
+  
+}
+
+.button:hover {
+  background-color: blue;
+}
+
+article {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background: linear-gradient(lightblue,lightgreen);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.werkgever,
+.werkzaamheden {
+  text-align: left;
+  padding: 2%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    row-gap: 8px;
+    grid-template-rows: auto 2fr auto;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+  }
+
+  h1 {
+    font-size: 4em;
+    padding-bottom: 1%;
+  }
+
+}
